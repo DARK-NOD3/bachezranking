@@ -1,0 +1,91 @@
+body {
+    font-family: sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+a {
+    color: #4d90fe;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.leaderboard-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.top-three {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-bottom: 40px;
+}
+
+.podium {
+    text-align: center;
+    width: 30%;
+}
+
+.podium img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #fff;
+}
+
+.podium.rank-1 {
+    order: 2;
+}
+.podium.rank-1 img {
+    border-color: #ffd700;
+}
+
+
+.podium.rank-2 {
+    order: 1;
+}
+.podium.rank-2 img {
+    border-color: #c0c0c0;
+}
+
+.podium.rank-3 {
+    order: 3;
+}
+.podium.rank-3 img {
+    border-color: #cd7f32;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+th {
+    background-color: #333;
+}
+
+td img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-right: 10px;
+    vertical-align: middle;
+}

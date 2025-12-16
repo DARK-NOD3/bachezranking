@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Team Leaderboard</title>
+    <link rel="stylesheet" href="{% static 'leaderboard/css/style.css' %}">
+</head>
+<body>
+    <div class="leaderboard-container">
+        <h1>Team Leaderboard</h1>
+        <a href="{% url 'individual_leaderboard' %}">View Individual Leaderboard</a>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Team Name</th>
+                    <th>Team Score</th>
+                    <th>Members</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for team in teams %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ team.name }}</td>
+                        <td>{{ team.team_score }}</td>
+                        <td>
+                            <ul>
+                                {% for member in team.members.all %}
+                                    <li>{{ member.name }} ({{ member.score }})</li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
